@@ -2662,19 +2662,19 @@ function TP(Pos)
     function TP1(Pos)
         Distance = (Pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
         if Distance < 25 then
-            Speed = 8000
+            Speed = 7500
         elseif Distance < 50 then
-            Speed = 3000
+            Speed = 2500
         elseif Distance < 150 then
-            Speed = 1000
+            Speed = 950
         elseif Distance < 250 then
-            Speed = 800
+            Speed = 750
         elseif Distance < 500 then
-            Speed = 400
-        elseif Distance < 750 then
             Speed = 350
-        elseif Distance >= 1000 then
+        elseif Distance < 750 then
             Speed = 300
+        elseif Distance >= 1000 then
+            Speed = 250
         end
         game:GetService("TweenService"):Create(
             game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
@@ -2969,7 +2969,7 @@ spawn(function()
     end
 end)
 
--- Auto Farm Level
+-- [ Auto Farm Level ] --
 
 _G.Setting["Start Farm"] = true
 StopTween(_G.Setting["Start Farm"])
@@ -3085,7 +3085,6 @@ spawn(function()
 			pcall(function()
 			if game.Players.LocalPlayer.Data.Level.Value >= 10 and game.Players.LocalPlayer.Data.Level.Value <= 75 then
 				game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-7894.6176757813, 5547.1416015625, -380.29119873047))
-                
 					for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
 						if v.Name == "Shanda" then
 							if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
@@ -3155,7 +3154,7 @@ spawn(function()
     end
 end)
 
--- Fighting Setting
+-- [ Fighting Setting ] --
 
 spawn(function()
     while task.wait() do
@@ -3225,7 +3224,7 @@ spawn(function()
     end
 end)
 
--- Quest Setting
+-- [ Quest Setting ] --
 
 StopTween(_G.Quest["Second Sea"])
 
@@ -3270,6 +3269,8 @@ spawn(function()
         end
     end
 end)
+
+-- [ Evolution Race ] --
 
 spawn(function()
     pcall(function()
@@ -3326,7 +3327,7 @@ spawn(function()
     end)
 end)
 
--- Item Settings
+    -- [ Item Settings ] --
 
     StopTween(_G.Item["Saber"])
 	
