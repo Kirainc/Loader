@@ -2,9 +2,9 @@ _G.Setting = {
     -- Start Farm Settings
     ["Start Farm"] = true,
     ["Bypass Teleport"] = true,
-    ["Disable 3D Rendering"] = true,
+    ["Disable 3D Rendering"] = false,
     ["Redeem Code At Level"] = 1,
-    ["Kaitun Capcut Screen"] = true,
+    ["Kaitun Capcut Screen"] = false,
     ["Awakening Fruits"] = true,
 }
 
@@ -3456,6 +3456,8 @@ for i,v in pairs(RaidsModule.advancedRaids) do
     table.insert(Raidslist,v)
 end
 
+-- [ Starting Dungeon ] --
+
 spawn(function()    
     while wait() do
         if _G.AutoDungeon then
@@ -3476,6 +3478,8 @@ spawn(function()
     end
 end)
 
+-- [ Kill Aura ] --
+
 spawn(function()
     while wait() do
         if _G.AutoDungeon then
@@ -3491,6 +3495,8 @@ spawn(function()
         end
     end
 end)
+
+-- [ Next Island ] --
 
 spawn(function()
     pcall(function()
@@ -3513,6 +3519,8 @@ spawn(function()
         end
     end)
 end)
+
+-- [ Raid Position ] --
 
 RaidType = 1
 spawn(function()
