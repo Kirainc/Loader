@@ -4,7 +4,7 @@ _G.Setting = {
     ["Bypass Teleport"] = true,
     ["Disable 3D Rendering"] = false,
     ["Redeem Code At Level"] = 1,
-    ["Kaitun Capcut Screen"] = false,
+    ["Kaitun Capcut Screen"] = true,
     ["Awakening Fruits"] = true,
 }
 
